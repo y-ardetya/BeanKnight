@@ -10,8 +10,13 @@ export const Shop = () => {
         <Carousels />
         <Stack
           direction="row"
-          spacing={12}
+          spacing={2}
+          xs={1}
           justifyContent="center"
+          sx={{
+            pl: '64px',
+            pr: '64px'
+          }}
         >
           {PRODUCT.map((item) => {
             return <Product item={item} />;

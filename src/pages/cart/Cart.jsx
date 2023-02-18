@@ -24,10 +24,15 @@ export const Cart = () => {
         </div>
         {totalBean > 0 ? (
           <div>
-            <p>Subtotal: ${totalBean}</p>
+            <Button
+              variant="text"
+              sx={{ color: "black", fontSize: "20px", fontWeight: "bold" }}
+            >
+              Subtotal: ${totalBean}
+            </Button>
           </div>
         ) : (
-          <p>No Beans Detected</p>
+          <h2>No Beans Detected</h2>
         )}
         <div
           style={{
@@ -44,7 +49,7 @@ export const Cart = () => {
           >
             <Button
               color="primary"
-              variant="outlined"
+              variant="contained"
               onClick={() => navigate("/")}
             >
               Continue Shopping

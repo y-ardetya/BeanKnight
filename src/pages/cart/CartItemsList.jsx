@@ -12,6 +12,7 @@ import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { ShopContext } from "../../context/shopContext";
 import { useContext } from "react";
+import AddIcon from '@mui/icons-material/Add';
 
 export const CartItemsList = (props) => {
   const { id, productName, productImage, price } = props.data;
@@ -50,10 +51,13 @@ export const CartItemsList = (props) => {
             <Button
               variant="contained"
               sx={{
-                paddingX: "90px",
+                paddingX: "80px",
               }}
             >
               {cartItems[id]}
+            </Button>
+            <Button variant="elevated" onClick={() => addToCart(id)}>
+              <AddIcon fontSize="large" sx={{ color: "#1976D2" }}></AddIcon>
             </Button>
             <Button variant="elevated" onClick={() => removeFromCart(id)}>
               <DeleteIcon fontSize="large" sx={{ color: "red" }}></DeleteIcon>

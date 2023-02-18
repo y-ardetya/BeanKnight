@@ -1,9 +1,10 @@
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
-.background {
+.App {
   background-color: black;
   background: url("./assets/bg.png");
   background-repeat: no-repeat;
@@ -17,9 +18,4 @@ body {
   overflow-x: hidden;
 }
 
-.gif {
-  position: absolute;
-  z-index: -1;
-  bottom: 0;
-  width: 20em;
-}
+
